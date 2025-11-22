@@ -1,4 +1,7 @@
 ## Overview
+
+An AI-powered data warehouse and pipeline orchestration platform. Build ETL workflows, generate SQL with Gemini, and visualize data health in real-time.
+
 **Data Pipeline**
 
 ![image](img/pipeline.jpeg)
