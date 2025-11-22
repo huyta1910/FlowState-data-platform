@@ -1,0 +1,5 @@
+{
+  "name": "FlowState Data Platform",
+  "description": "A next-generation AI-powered data warehouse and pipeline orchestration platform. Build ETL workflows, generate SQL with Gemini, and visualize data health in real-time.",
+  "requestFramePermissions": []
+}
