@@ -127,7 +127,7 @@ const QueryLab: React.FC = () => {
           <div className="bg-slate-800/50 p-3 rounded-lg rounded-tl-none border border-slate-700/50">
              <p className="text-sm text-slate-300">Hello! I can help you write SQL or explain errors. Try asking:</p>
              <ul className="mt-2 space-y-1 text-xs text-slate-400 list-disc list-inside">
-               <li>"Find customers who spent > $500"</li>
+               <li>"Find customers who spent &gt; $500"</li>
                <li>"Count orders by day last week"</li>
              </ul>
           </div>
