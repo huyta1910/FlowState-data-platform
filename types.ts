@@ -33,7 +33,7 @@ export interface TableSchema {
 export interface CatalogTable {
   id: string;
   name: string;
-  schema: string; // e.g., "public"
+  schema: string; 
   rowCount: number;
   lastUpdated: string;
   columns: TableSchema[];

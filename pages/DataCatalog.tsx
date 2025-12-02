@@ -82,6 +82,7 @@ const DataCatalog: React.FC = () => {
           <>
             <div className="p-6 border-b border-slate-800 bg-slate-900">
               <div className="flex justify-between items-start">
+                
                 <div>
                   <div className="flex items-center gap-2 text-sm text-slate-500 mb-1">
                     <Database size={14} /> {selectedTable.schema}
@@ -174,3 +175,4 @@ const DataCatalog: React.FC = () => {
 };
 
 export default DataCatalog;
+
