@@ -18,7 +18,6 @@ export const testConnection = async (
             },
             body: JSON.stringify({ type, subtype, config }),
         });
-
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
