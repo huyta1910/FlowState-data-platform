@@ -144,6 +144,65 @@ const NodeConfigModal: React.FC<NodeConfigModalProps> = ({ isOpen, onClose, node
                         </div>
                     </>
                 );
+            case 'postgres':
+                return (
+                    <>
+                        <div className="grid grid-cols-3 gap-4">
+                            <div className="col-span-2 space-y-1">
+                                <label className="text-xs font-medium text-slate-400">Host</label>
+                                <input
+                                    type="text"
+                                    value={config.host || ''}
+                                    onChange={e => handleChange('host', e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-md px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-cyan-500/50"
+                                    placeholder="db.example.com"
+                                />
+                            </div>
+                            <div className="space-y-1">
+                                <label className="text-xs font-medium text-slate-400">Port</label>
+                                <input
+                                    type="text"
+                                    value={config.port || ''}
+                                    onChange={e => handleChange('port', e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-md px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-cyan-500/50"
+                                    placeholder="5432"
+                                />
+                            </div>
+                        </div>
+                        <div className="space-y-1">
+                            <label className="text-xs font-medium text-slate-400">Database Name</label>
+                            <input
+                                type="text"
+                                value={config.database || ''}
+                                onChange={e => handleChange('database', e.target.value)}
+                                className="w-full bg-slate-950 border border-slate-800 rounded-md px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-cyan-500/50"
+                                placeholder="my_database"
+                            />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-1">
+                                <label className="text-xs font-medium text-slate-400">Username</label>
+                                <input
+                                    type="text"
+                                    value={config.username || ''}
+                                    onChange={e => handleChange('username', e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-md px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-cyan-500/50"
+                                    placeholder="postgres"
+                                />
+                            </div>
+                            <div className="space-y-1">
+                                <label className="text-xs font-medium text-slate-400">Password</label>
+                                <input
+                                    type="password"
+                                    value={config.password || ''}
+                                    onChange={e => handleChange('password', e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-md px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-cyan-500/50"
+                                    placeholder="••••••••"
+                                />
+                            </div>
+                        </div>
+                    </>
+                );
             default:
                 return <div className="text-slate-400 text-sm">Generic configuration for {node.subtype}</div>;
         }
